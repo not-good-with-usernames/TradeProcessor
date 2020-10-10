@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TradeProcessor.Models\TradeProcessor.Models.csproj" />
+    <ProjectReference Include="..\TradeProcessor.Repository\TradeProcessor.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

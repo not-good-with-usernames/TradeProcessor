@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20201010024451_InitialCreate.cs" />
+    <Compile Remove="Migrations\20201010024451_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20201010033642_InitialCreate.cs" />
+    <Compile Remove="Migrations\20201010033642_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20201010034420_InitialCreate.cs" />
+    <Compile Remove="Migrations\20201010034420_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20201010035444_InitialCreate.cs" />
+    <Compile Remove="Migrations\20201010035444_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20201010035836_InitialCreate.cs" />
+    <Compile Remove="Migrations\20201010035836_InitialCreate.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TradeProcessor.Models\TradeProcessor.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+</Project>
