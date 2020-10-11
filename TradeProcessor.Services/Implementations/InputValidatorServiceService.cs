@@ -5,11 +5,11 @@ namespace TradeProcessor.Services.Implementations
 {
 
 
-    public class InputValidator : IInputValidator
+    public class InputValidatorServiceService : IInputValidatorService
     {
-        private readonly ILogger<InputValidator> _logger;
+        private readonly ILogger<InputValidatorServiceService> _logger;
 
-        public InputValidator(ILogger<InputValidator> logger)
+        public InputValidatorServiceService(ILogger<InputValidatorServiceService> logger)
         {
             _logger = logger;
         }

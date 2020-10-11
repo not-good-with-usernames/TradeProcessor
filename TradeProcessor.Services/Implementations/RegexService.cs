@@ -9,12 +9,12 @@ namespace TradeProcessor.Services.Implementations
 {
     public class RegexService : IRegexService
     {
-        private readonly IInputValidator _inputValidator;
+        private readonly IInputValidatorService _inputValidatorService;
         private Regex _regex;
 
-        public RegexService(IConfiguration configuration, IInputValidator inputValidator)
+        public RegexService(IConfiguration configuration, IInputValidatorService inputValidatorService)
         {
-            _inputValidator = inputValidator;
+            _inputValidatorService = inputValidatorService;
 
             var pattern = configuration["RegexPattern"];
 
@@ -23,7 +23,7 @@ namespace TradeProcessor.Services.Implementations
 
         public List<string> Execute(string input)
         {
-            var valid = _inputValidator.Validate(input);
+            var valid = _inputValidatorService.Validate(input);
 
             if (!valid)
             {

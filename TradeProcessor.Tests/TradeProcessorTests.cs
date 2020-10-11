@@ -50,7 +50,7 @@ namespace TradeProcessor.Tests
         }
 
         [Fact]
-        public void TradeParser_NegativeTradAmount_ThrowsException()
+        public void TradeParser_NegativeTradeAmount_ThrowsException()
         {
             var regexMock = SetupRegexMock("-1");
 

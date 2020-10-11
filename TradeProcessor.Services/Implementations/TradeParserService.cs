@@ -12,7 +12,7 @@ namespace TradeProcessor.Services.Implementations
         private readonly float _lotSize;
 
 
-        public TradeParserService(IRegexService regexService, IConfiguration configuration) //, float lotSize)
+        public TradeParserService(IRegexService regexService, IConfiguration configuration)
         {
             _regexService = regexService;
             _configuration = configuration;

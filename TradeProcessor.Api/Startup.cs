@@ -30,7 +30,7 @@ namespace TradeProcessor.Api
                 options.UseSqlServer(_configuration["ConnectionString"]);
             });
 
-            services.AddTransient<IInputValidator, InputValidator>();
+            services.AddTransient<IInputValidatorService, InputValidatorServiceService>();
             services.AddTransient<IRegexService, RegexService>();
             services.AddTransient<ITradeParserService, TradeParserService>();
             services.AddTransient<ITradeDataService, TradeDataService>();

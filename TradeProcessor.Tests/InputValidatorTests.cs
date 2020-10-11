@@ -7,13 +7,13 @@ namespace TradeProcessor.Tests
 {
     public class InputValidatorTests
     {
-        private InputValidator _inputValidator;
+        private InputValidatorServiceService _inputValidatorServiceService;
 
         public InputValidatorTests()
         {
-            var logger = Mock.Of<ILogger<InputValidator>>();
+            var logger = Mock.Of<ILogger<InputValidatorServiceService>>();
 
-            _inputValidator = new InputValidator(logger);
+            _inputValidatorServiceService = new InputValidatorServiceService(logger);
         }
 
         [Theory]
@@ -30,7 +30,7 @@ namespace TradeProcessor.Tests
         [InlineData("", false)]
         public void InputValidator_GoodInputReturnsTrue_BadReturnsFalse(string input, bool expected)
         {
-            var output = _inputValidator.Validate(input);
+            var output = _inputValidatorServiceService.Validate(input);
 
             Assert.Equal(expected, output);
         }

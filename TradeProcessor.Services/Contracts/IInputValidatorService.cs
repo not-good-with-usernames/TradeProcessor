@@ -1,6 +1,6 @@
 ﻿namespace TradeProcessor.Services.Contracts
 {
-    public interface IInputValidator
+    public interface IInputValidatorService
     {
         bool Validate(string input);
     }
